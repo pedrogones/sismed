@@ -1,0 +1,47 @@
+<div class="container mt-4">
+  <div class="row">
+    <!-- Dropdown para filtros -->
+    <div class="col-md-4 mb-3">
+      <div class="dropdown">
+        <label for="date-input" class="form-label" style="font-weight: bold;">Selecione como filtrar</label>
+        <button class="btn btn-primary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Filtros
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li class="cursor-pointer"><a class="dropdown-item" (click)="setFilter('date')">Por data</a></li>
+          <li class="cursor-pointer"><a class="dropdown-item" (click)="setFilter('patient')">Por paciente</a></li>
+          <li class="cursor-pointer"><a class="dropdown-item" (click)="setFilter('medico')">Por médico</a></li>
+          <li class="cursor-pointer"><a class="dropdown-item" (click)="setFilter('status')">Por status</a></li>
+          <li class="cursor-pointer"><hr class="dropdown-divider"></li>
+          <li class="cursor-pointer"><a class="dropdown-item" (click)="clearFilters()">Limpar filtro</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Inputs de filtro -->
+    <div class="col-md-8 mb-3">
+      <div class="row">
+        <div *ngIf="currentFilter === 'date'" class="col-12 filter-inputs">
+          <label for="date-input" class="form-label">Escolha uma data:</label>
+          <input type="date" id="date-input" placeholder="Selecione uma data" class="form-control">
+        </div>
+        <div *ngIf="currentFilter === 'patient'" class="col-12 filter-inputs">
+          <label for="patient-input" class="form-label">Nome do paciente:</label>
+          <input type="text" id="patient-input" placeholder="Digite aqui" class="form-control">
+        </div>
+        <div *ngIf="currentFilter === 'medico'" class="col-12 filter-inputs">
+          <label for="medico-input" class="form-label">Nome do Médico:</label>
+          <input type="text" id="medico-input" placeholder="Digite aqui" class="form-control">
+        </div>
+        <div *ngIf="currentFilter === 'status'" class="col-12 filter-inputs">
+          <label for="status-input" class="form-label">Status:</label>
+          <select id="status-input" class="form-select">
+            <option value="">Selecione...</option>
+            <option value="completed">Concluída</option>
+            <option value="pending">Pendente</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
