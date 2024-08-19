@@ -1,0 +1,19 @@
+#sidebar {
+  width: 250px;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
