@@ -1,0 +1,21 @@
+.login-section {
+  margin-top: 10vh;
+  min-height: 70vh;
+}
+
+.footer-section {
+  height: 20vh;
+}
+.background-img {
+  background-image: url('./fundo.png.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
