@@ -14,7 +14,9 @@
     </div>
 
   </div>
-
+  <div *ngIf="isLoading">
+    <app-spinner></app-spinner>
+  </div>
   <div class="container-fluid">
     <table class="table table-bordered table-hover">
       <thead class="thead-dark">
