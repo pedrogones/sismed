@@ -5,7 +5,7 @@ import { SidebarComponent } from '../side-bar/sidebar/sidebar.component';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent],
+  imports: [RouterOutlet],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })

@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-render',
   standalone: true,
-  imports: [RouterOutlet, NavBarComponent, SidebarComponent, SpinnerComponent, CommonModule],
+  imports: [RouterOutlet, NavBarComponent, SidebarComponent, CommonModule],
   templateUrl: './render.component.html',
   styleUrl: './render.component.scss'
 })
