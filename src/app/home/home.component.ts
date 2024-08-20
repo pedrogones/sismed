@@ -1,5 +1,5 @@
 import { SharedMessagesService } from './../shared-messages/shared-messages.service';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FiltersComponent } from "../filters/filters.component";
 import { SpinnerComponent } from '../layouts/spinner/spinner.component';
 import { CommonModule } from '@angular/common';
@@ -12,7 +12,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  @Input() idConsulta: string  = '1';
+  @Input() paciente: string = "Pedro Targino";
+  @Input() medico: string = "Jõao Carlos";
+  @Input() dataConsulta: string = "25/09/2024";
+  @Input() motivoConsulta: string  = "Rotina";
+  @Input() valorConsulta: number = 235.90;
   isLoading: boolean = false;
 
   constructor(private sharedMessage: SharedMessagesService){
