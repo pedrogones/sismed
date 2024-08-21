@@ -20,6 +20,7 @@ export const routes: Routes = [
       { path: 'consultas', component: ConsultasComponent },
       { path: 'pacientes', component: PacientesComponent },
       { path: 'pacientes/edit', component: EditPacienteComponent },
+      { path: 'pacientes/create', component: RegisterPacienteComponent },
 
       { path: 'medicos', component: MedicosComponent }
     ]
