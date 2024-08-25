@@ -9,6 +9,7 @@ import { MedicosComponent } from './medicos/medicos.component';
 import { LoginComponent } from './auth/login/login.component';
 import { EditPacienteComponent } from './pacientes/edit-paciente/edit-paciente.component';
 import { RegisterPacienteComponent } from './pacientes/register-paciente/register-paciente.component';
+import { CreatePacienteComponent } from './pacientes/create-paciente/create-paciente.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -19,8 +20,8 @@ export const routes: Routes = [
       { path: 'dashboard', component: HomeComponent },
       { path: 'consultas', component: ConsultasComponent },
       { path: 'pacientes', component: PacientesComponent },
-      { path: 'pacientes/edit', component: EditPacienteComponent },
-      { path: 'pacientes/create', component: RegisterPacienteComponent },
+      { path: 'pacientes/1/edit', component: EditPacienteComponent },
+      { path: 'pacientes/create', component: CreatePacienteComponent },
 
       { path: 'medicos', component: MedicosComponent }
     ]
