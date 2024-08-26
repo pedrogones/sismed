@@ -6,3 +6,15 @@
   width: 150px; /* Ajuste conforme necessário */
   height: 50px; /* Ajuste conforme necessário */
 }
+.logo-icon {
+  font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+  font-weight: bold;
+  color: #000; /* Ajuste a cor conforme necessário */
+  background-color: #fff; /* Ajuste o fundo se desejar */
+  border-radius: 50%; /* Ajuste o arredondamento conforme necessário */
+  width: 3rem; /* Ajuste o tamanho do círculo conforme necessário */
+  height: 3rem; /* Ajuste o tamanho do círculo conforme necessário */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,22 +1,32 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="mt-2 navbar-brand" style="margin-left: 2rem;" href="/dashboard">SisMed</a>
+    <a class="navbar-brand d-flex align-items-center" style="margin-left: 2rem;" href="/dashboard">
+      <div class="logo-icon">S</div>
+    </a>
     <button class="navbar-toggler sidebar-header" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Meu Perfil</a>
+          <div class="d-flex align-items-center">
+            <a class="nav-link" href="#" title="Meu perfil">        <i class="fas fa-user profile-icon me-3" style="font-size: 1.25rem;"></i>
+            </a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dúvidas?</a>
+          <a class="nav-link d-flex align-items-center" href="#" title=" Dúvidas?">
+            <i class="fas fa-question-circle me-2" style="font-size: 1.25rem;"></i>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/login">Logout</a>
+          <a class="nav-link d-flex align-items-center" href="/login" title="Logout">
+            <i class="fas fa-sign-out-alt me-2" style="font-size: 1.25rem;"></i>
+          </a>
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
