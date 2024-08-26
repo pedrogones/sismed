@@ -15,28 +15,28 @@
           <div class="col-lg-7 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="nomePaciente">Nome Completo <strong class="text-danger">*</strong></label>
-              <input type="text" class="form-control" id="nomePaciente" name="nomePaciente"
+              <input required type="text" class="form-control" id="nomePaciente" name="nomePaciente"
                 placeholder="Digite o nome completo">
             </div>
           </div>
           <div class="col-lg-5 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="cpfPaciente">CPF <strong class="text-danger">*</strong></label>
-              <input type="text" class="form-control" id="cpfPaciente" (input)="maskCpf($event)" name="cpfPaciente"
+              <input required type="text" class="form-control" id="cpfPaciente" (input)="maskCpf($event)" name="cpfPaciente"
                 placeholder="Digite o CPF">
             </div>
           </div>
           <div class="col-lg-5 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="dataNascimento">Data de Nascimento <strong class="text-danger">*</strong></label>
-              <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"
+              <input required type="date" class="form-control" id="dataNascimento" name="dataNascimento"
                 placeholder="Escolha a data de nascimento">
             </div>
           </div>
           <div class="col-lg-7 col-md-5 mb-3">
             <div class="floating-label form-group select-floating">
               <label class="px-2" for="sexoPaciente">Sexo <strong class="text-danger">*</strong></label>
-              <select class="form-select rounded" id="sexoPaciente" name="sexoPaciente" autocomplete="off">
+              <select required class="form-select rounded" id="sexoPaciente" name="sexoPaciente" autocomplete="off">
                 <option value="" selected disabled hidden>Selecione o sexo</option>
                 <option value="f">Feminino</option>
                 <option value="m">Masculino</option>
@@ -44,38 +44,37 @@
             </div>
           </div>
 
-          <!-- Address Fields -->
           <div class="col-lg-3 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="cepPaciente">CEP <strong class="text-danger">*</strong></label>
-              <input type="text" class="form-control" id="cepPaciente" (input)="maskCEP($event)" (blur)="buscarEndereco($event)" name="cepPaciente" placeholder="Digite o CEP">
+              <input required type="text" class="form-control" id="cepPaciente" (input)="maskCEP($event)" (blur)="buscarEndereco($event)" name="cepPaciente" placeholder="Digite o CEP">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="estadoPaciente">Estado <strong class="text-danger">*</strong></label>
-              <input type="text" class="form-control" id="estadoPaciente" name="estadoPaciente"
+              <input required type="text" class="form-control" id="estadoPaciente" name="estadoPaciente"
                 placeholder="Digite o estado">
             </div>
           </div>
           <div class="col-lg-6 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="cidadePaciente">Cidade <strong class="text-danger">*</strong></label>
-              <input type="text" class="form-control" id="cidadePaciente" name="cidadePaciente"
+              <input required type="text" class="form-control" id="cidadePaciente" name="cidadePaciente"
                 placeholder="Digite a cidade">
             </div>
           </div>
           <div class="col-lg-8 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="ruaPaciente">Rua <strong class="text-danger">*</strong></label>
-              <input type="text" class="form-control" id="ruaPaciente" name="ruaPaciente" placeholder="Digite a rua">
+              <input required type="text" class="form-control" id="ruaPaciente" name="ruaPaciente" placeholder="Digite a rua">
             </div>
           </div>
           <div class="col-lg-2 col-md-5 mb-3">
             <div class="floating-label form-group">
               <label class="px-2" for="numeroPaciente">Número <strong class="text-danger">*</strong></label>
-              <input type="text" class="form-control" id="numeroPaciente" name="numeroPaciente"
+              <input required type="text" class="form-control" id="numeroPaciente" name="numeroPaciente"
                 placeholder="Nº da residência">
             </div>
           </div>
@@ -86,7 +85,6 @@
                 placeholder="Apt, Bloco, etc. (opcional)">
             </div>
           </div>
-          <!-- End Address Fields -->
 
           <div class="col-lg-12 d-flex mt-4 justify-content-center gap-3">
             <div class="col-md-3 mb-3">

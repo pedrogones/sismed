@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { Endereco } from '../../models/endereco';
 import { SpinnerComponent } from '../../layouts/spinner/spinner.component';
 import { CommonModule } from '@angular/common';
+import { SharedMessagesService } from '../../shared-messages/shared-messages.service';
 
 @Component({
   selector: 'app-create-paciente',
@@ -20,7 +21,7 @@ export class CreatePacienteComponent implements OnInit {
   endereco: Endereco | null = null;
   enderecoForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private sharedsServices: ServicesService) {
+  constructor(private fb: FormBuilder, private sharedsServices: ServicesService, private messages: SharedMessagesService) {
     this.enderecoForm = this.fb.group({
       cep: ['', Validators.required],
       estado: [{ value: '', disabled: true }],
@@ -44,21 +45,23 @@ export class CreatePacienteComponent implements OnInit {
   buscarEndereco(cep: any) {
     const input = cep.target as HTMLInputElement;
     const cepValue = input.value.trim();
-    console.log(cepValue)
-    if (!cepValue) {
+    if (!cepValue || cepValue.length < 7) {
       this.endereco = null;
       return;
     }
-    this.isLoading = true;
     this.sharedsServices.loadCep(cepValue).subscribe(
       (data) => {
-        this.endereco = data;
-        this.preencherCamposEndereco();
+        if (data) {
+          this.endereco = data;
+          this.preencherCamposEndereco();
+        } else {
+          this.clearCepField()
+          this.endereco = null;
+        }
+        this.isLoading = false;
       },
       (error) => {
-        this.endereco = null;
-      },
-      () => {
+        this.clearCepField()
         this.isLoading = false;
       }
     );
@@ -81,6 +84,18 @@ export class CreatePacienteComponent implements OnInit {
       }
     }
   }
+  private clearCepField() {
+    const cepInput = document.getElementById('cepPaciente') as HTMLInputElement | null;
+    if (cepInput) {
+      cepInput.value = '';
+    }
+  }
 
+  save(){
+    this.messages.sucssesMessageSwal("Paciente cadastrado com sucesso");
+  }
+  cancel(){
+
+  }
 
 }
