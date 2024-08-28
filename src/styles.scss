@@ -38,3 +38,13 @@ $sis-med-theme: mat.define-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.form-container {
+  border: 4px solid #075EA2;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.register-form {
+  margin-top: 5vh;
+  min-height: 70vh;
+}
