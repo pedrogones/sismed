@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialogModule } from '@angular/material/dialog';
-import { Consulta } from '../../../models/consulta';
+import { Consulta } from '../../models/consulta';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 declare var $: any;

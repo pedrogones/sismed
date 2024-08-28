@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedMessagesService } from '../../shared-messages/shared-messages.service';
+import { SharedMessagesService } from '../shared-messages/shared-messages.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateConsultasComponent } from './create-consultas/create-consultas.component';
-import { Consulta } from '../../models/consulta';
+import { Consulta } from '../models/consulta';
 import { FormsModule } from '@angular/forms';
 declare var $: any;
 

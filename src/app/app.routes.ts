@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { NavBarComponent } from './layouts/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
-import { ConsultasComponent } from './consultas/consultas/consultas.component';
+import { ConsultasComponent } from './consultas/consultas.component';
 import { AppComponent } from './app.component';
 import { RenderComponent } from './layouts/render/render.component';
 import { MedicosComponent } from './medicos/medicos.component';
