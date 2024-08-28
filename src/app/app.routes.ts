@@ -12,7 +12,7 @@ import { RegisterPacienteComponent } from './pacientes/register-paciente/registe
 import { CreatePacienteComponent } from './pacientes/create-paciente/create-paciente.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: '',
     component: RenderComponent,
