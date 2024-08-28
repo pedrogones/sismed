@@ -10,6 +10,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { EditPacienteComponent } from './pacientes/edit-paciente/edit-paciente.component';
 import { RegisterPacienteComponent } from './pacientes/register-paciente/register-paciente.component';
 import { CreatePacienteComponent } from './pacientes/create-paciente/create-paciente.component';
+import { GestoresComponent } from './gestores/gestores.component';
+import { CreateGestorComponent } from './gestores/create-gestor/create-gestor.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,8 +24,10 @@ export const routes: Routes = [
       { path: 'pacientes', component: PacientesComponent },
       { path: 'pacientes/1/edit', component: EditPacienteComponent },
       { path: 'pacientes/create', component: CreatePacienteComponent },
+      { path: 'medicos', component: MedicosComponent },
+      { path: 'gestores', component: GestoresComponent },
+      { path: 'gestores/create', component: CreateGestorComponent }
 
-      { path: 'medicos', component: MedicosComponent }
     ]
   },
   { path: 'login', component: LoginComponent },

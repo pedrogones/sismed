@@ -1,0 +1,116 @@
+<div *ngIf="isLoading">
+  <app-spinner></app-spinner>
+</div>
+<section class="register-form">
+  <div class="patient-register d-flex flex-column p-2">
+    <div class="cw cw__icon form-container" style="color: #212529">
+      <div class="cw__header mb-4" style="margin-top: 0.6rem;">
+        <div class="card_icon cw__icon--format is-primary">
+          <i style="color: #075EA2;" class="fas fa-user-plus fa-2x "></i>
+          <h3 style="color: #075EA2;">Cadastro de novo Gestor</h3>
+        </div>
+      </div>
+      <form class="form-patient">
+        <div class="row mb-3 mt-2">
+          <div class="col-lg-7 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="nomeGestor">Nome Completo <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" id="nomeGestor" name="nomeGestor"
+                placeholder="Digite o nome completo">
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="cpfGestor">CPF <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" id="cpfGestor" (input)="maskCpf($event)" name="cpfGestor"
+                placeholder="Digite o CPF">
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="dataNascimento">Data de Nascimento <strong class="text-danger">*</strong></label>
+              <input required type="date" class="form-control" id="dataNascimento" name="dataNascimento"
+                placeholder="Escolha a data de nascimento">
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-5 mb-3">
+            <div class="floating-label form-group select-floating">
+              <label class="px-2" for="sexoGestor">Sexo <strong class="text-danger">*</strong></label>
+              <select required class="form-select rounded" id="sexoGestor" name="sexoGestor" autocomplete="off">
+                <option value="" selected disabled hidden>Selecione o sexo</option>
+                <option value="f">Feminino</option>
+                <option value="m">Masculino</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="mt-4  mb-4">
+
+          <div class="col-lg-3 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="cepGestor">CEP <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" id="cepGestor" (input)="maskCEP($event)" (blur)="buscarEndereco($event)" name="cepGestor" placeholder="Digite o CEP">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="estadoGestor">Estado <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" id="estadoGestor" name="estadoGestor"
+                placeholder="Digite o estado">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="cidadeGestor">Cidade <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" id="cidadeGestor" name="cidadeGestor"
+                placeholder="Digite a cidade">
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="ruaGestor">Rua <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" id="ruaGestor" name="ruaGestor" placeholder="Digite a rua">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="numeroGestor">Número <strong class="text-danger">*</strong></label>
+              <input required type="text" class="form-control" id="numeroGestor" name="numeroGestor"
+                placeholder="Nº da residência">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-5 mb-3">
+            <div class="floating-label form-group">
+              <label class="px-2" for="complementoGestor">Complemento</label>
+              <input type="text" class="form-control" id="complementoGestor" name="complementoGestor"
+                placeholder="Apt, Bloco, etc. (opcional)">
+            </div>
+          </div>
+
+          <div class="col-lg-12 d-flex mt-4 justify-content-center gap-3">
+            <div class="col-md-3 mb-3">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked disabled role="switch" id="possuiPlano">
+                <label class="form-check-label" value="plan1" for="possuiPlano">Possui plano de saúde</label>
+              </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="preferenciaMedico">
+                <label class="form-check-label" value="plan2" for="preferenciaMedico">Preferência de médico</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex justify-content-start">
+          <div class="mt-3">
+            <button type="submit" class="btn btn-base btn-success" id="formSubmit">Cadastrar</button>
+            <a class="btn btn-base btn-outline-secondary" style="margin-left: 8px;" href="/Gestors">Cancelar</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

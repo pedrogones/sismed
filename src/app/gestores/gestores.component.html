@@ -1,0 +1,98 @@
+<nav class="p-5 bg-primary-opacity-25">
+  <div class="container-fluid">
+
+    <div style="color: #075EA2;" class="bg-body mb-4 p-3 rounded">
+      <h1 class="mb-4">Gestores</h1>
+      <a href="gestores/create" class="mb-3 btn-primary btn-xs btn btn-create float-right b" data-toggle="tooltip" data-placement="bottom"
+         title="Cadastrar Gestor"><i class="fas fa-plus"></i>
+        <span style="margin-left: 1rem;" class="d-none ml-3 d-lg-inline ml-2">Cadastrar Gestor</span>
+      </a>
+      <div class="d-none d-md-flex input-group w-auto my-auto">
+        <input autocomplete="off" type="search" class="form-control rounded" placeholder="Buscar Gestores" style="min-width: 225px" />
+        <button (click)="search()" class="bg-primary input-group-text text-white border">
+          <i style="color: black;" class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div *ngIf="isLoading">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="container-fluid">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Ordem</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Situação</th>
+          <th scope="col">Data/Hora</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Pedro</td>
+          <td>  <p class="bg-success text-white rounded-pill px-3 py-1 mb-0">ativo</p></td>
+          <td>20/09/2024</td>
+          <td>
+            <div class="d-flex align-items-center">
+              <button title="Excluir" (click)="remove()" class="btn btn-outline-danger btn-sm me-2">
+                <i class="fas fa-trash"></i>
+
+              </button>
+              <button title="Editar" (click)="update()" class="btn btn-outline-primary btn-sm">
+                <i class="fas fa-edit"></i>
+
+              </button>
+            </div>
+          </td>
+
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Pedro</td>
+          <td>
+            <p class="bg-warning text-white rounded-pill px-3 py-1 mb-0">não ativo</p>
+          </td>
+
+          <td>20/09/2024</td>
+          <td>
+            <div class="d-flex align-items-center">
+              <button title="Excluir" (click)="remove()" class="btn btn-outline-danger btn-sm me-2">
+                <i class="fas fa-trash"></i>
+
+              </button>
+              <button title="Editar" (click)="update()"  class="btn btn-outline-primary btn-sm">
+                <i class="fas fa-edit"></i>
+
+              </button>
+            </div>
+          </td>
+
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Pedro</td>
+          <td> <p class="bg-danger text-white rounded-pill px-3 py-1 mb-0">Desligado</p></td>
+          <td>20/09/2024</td>
+          <td>
+            <div class="d-flex align-items-center">
+              <button title="Excluir" (click)="remove()" class="btn btn-outline-danger btn-sm me-2">
+                <i class="fas fa-trash"></i>
+
+              </button>
+              <button title="Editar" (click)="update()" class="btn btn-outline-primary btn-sm">
+                <i class="fas fa-edit"></i>
+
+              </button>
+            </div>
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</nav>
