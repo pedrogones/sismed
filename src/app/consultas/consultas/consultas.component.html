@@ -1,8 +1,12 @@
 <nav class="p-5 bg-primary-opacity-25">
   <div class="container-fluid">
-
     <div class="bg-body mb-4 p-3 rounded">
       <h1 class="mb-4">Consultas</h1>
+      <button (click)="openCreateConsultasModal()" class="mb-3 btn-primary btn-xs btn btn-create float-right b" data-toggle="modal" data-target="#createConsultaModal">
+        <i class="fas fa-plus"></i>
+        <span style="margin-left: 1rem;" class="d-none ml-3 d-lg-inline ml-2">Marcar uma nova consulta</span>
+      </button>
+
       <div class="d-none d-md-flex input-group w-auto my-auto">
         <input autocomplete="off" type="search" class="form-control rounded" placeholder="Buscar Status" style="min-width: 225px" />
         <button (click)="search()" class="bg-primary input-group-text text-white border">
@@ -12,6 +16,21 @@
     </div>
 
   </div>
+
+  <!-- Modal Structure -->
+<div id="createConsultaModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createConsultaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document"> <!-- Ajuste a largura da modal aqui -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createConsultaModalLabel">Marcar Nova Consulta</h5>
+      </div>
+      <div class="modal-body">
+        <app-create-consultas></app-create-consultas>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <div class="container-fluid">
     <table class="table table-bordered table-hover">
@@ -83,7 +102,6 @@
           </td>
 
         </tr>
-
       </tbody>
     </table>
   </div>

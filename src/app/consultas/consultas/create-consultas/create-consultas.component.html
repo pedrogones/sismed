@@ -1,0 +1,73 @@
+<form (ngSubmit)="onSubmit()" id="consultaForm" #consultaForm="ngForm">
+  <div class="form-row row">
+    <div class="form-group mb-3 col-md-6">
+      <label for="paciente">Paciente <strong class="text-danger">*</strong></label>
+      <select id="paciente" class="form-select form-control" [(ngModel)]="consulta.paciente" name="paciente" required>
+        <option *ngFor="let paciente of pacientes" [value]="paciente">{{ paciente.nome }}</option>
+      </select>
+    </div>
+
+    <div class="form-group mb-3 col-md-6">
+      <label for="medico">Médico <strong class="text-danger">*</strong></label>
+      <select id="medico" class="form-select form-control" [(ngModel)]="consulta.medico" name="medico" required>
+        <option *ngFor="let medico of medicos" [value]="medico">{{ medico.nome }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row row">
+    <div class="form-group mb-3 col-md-6">
+      <label for="dataConsulta">Data da Consulta <strong class="text-danger">*</strong></label>
+      <input type="date" id="dataConsulta" class="form-control" [(ngModel)]="consulta.dataConsulta" name="dataConsulta" required>
+    </div>
+
+    <div class="form-group mb-3 col-md-6">
+      <label for="valorConsulta">Valor da Consulta <strong class="text-danger">*</strong></label>
+      <select id="valorConsulta" class="form-select form-control" [(ngModel)]="consulta.valorConsulta" name="valorConsulta" required>
+        <option value="300">Sem Plano</option>
+        <option value="200">Com Plano</option>
+        <option value="250">Prioridade em Médicos</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group mb-3 col-md-12">
+    <label for="horaConsulta">Hora da Consulta <strong class="text-danger">*</strong></label>
+
+    <!-- Botão para exibir opções de horário -->
+    <div class="d-flex flex-column">
+      <button
+        type="button"
+        class="btn btn-primary d-flex justify-content-between align-items-center"
+        (click)="toggleHourSelection()"
+      >
+        {{ selectedHour || 'Selecionar a hora' }}
+        <i class="fas fa-chevron-down"></i>
+      </button>
+
+      <!-- Opções de horários -->
+      <div *ngIf="showHourOptions" class="mt-2">
+        <div class="btn-group-vertical w-100">
+          <button
+            *ngFor="let time of availableTimes"
+            type="button"
+            class="btn btn-outline-primary text-left w-100"
+            (click)="selectHour(time)"
+          >
+            {{ time }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="form-group col-md-12">
+      <label for="motivoConsulta">Motivo da Consulta (Descreva sua necessidade) <strong class="text-danger">*</strong></label>
+      <textarea id="motivoConsulta" class="form-control" [(ngModel)]="consulta.motivoConsulta" name="motivoConsulta"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeModal('createConsultaModal')">Fechar</button>
+      <button type="submit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+    </div>
+</form>
