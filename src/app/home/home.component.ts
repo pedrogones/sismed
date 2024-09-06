@@ -1,4 +1,4 @@
-import { SharedMessagesService } from './../shared-messages/shared-messages.service';
+import { SharedMessagesService } from '../../shared-messages/shared-messages.service';
 import { Component, Input } from '@angular/core';
 import { FiltersComponent } from "../filters/filters.component";
 import { SpinnerComponent } from '../layouts/spinner/spinner.component';

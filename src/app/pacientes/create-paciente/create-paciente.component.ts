@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ServicesService } from '../../shared/services.service';
+import { ServicesService } from '../../../shared/services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Observable } from 'rxjs';
-import { Endereco } from '../../models/endereco';
+import { Endereco } from '../../../models/endereco';
 import { SpinnerComponent } from '../../layouts/spinner/spinner.component';
 import { CommonModule } from '@angular/common';
-import { SharedMessagesService } from '../../shared-messages/shared-messages.service';
+import { SharedMessagesService } from '../../../shared-messages/shared-messages.service';
 
 @Component({
   selector: 'app-create-paciente',

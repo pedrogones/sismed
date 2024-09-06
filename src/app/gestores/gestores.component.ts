@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { SharedMessagesService } from '../shared-messages/shared-messages.service';
+import { SharedMessagesService } from '../../shared-messages/shared-messages.service';
 import { SpinnerComponent } from "../layouts/spinner/spinner.component";
 import { CommonModule } from '@angular/common';
-import { ServicesService } from '../shared/services.service';
+import { ServicesService } from '../../shared/services.service';
 
 @Component({
   selector: 'app-gestores',

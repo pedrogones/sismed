@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedMessagesService } from '../shared-messages/shared-messages.service';
+import { SharedMessagesService } from '../../shared-messages/shared-messages.service';
 
 @Component({
   selector: 'app-pacientes',

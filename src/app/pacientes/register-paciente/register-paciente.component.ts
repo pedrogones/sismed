@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ServicesService } from '../../shared/services.service';
+import { ServicesService } from '../../../shared/services.service';
 import { FooterComponent } from '../../layouts/footer/footer.component';
 import { HeaderComponent } from '../../layouts/header/header.component';
 

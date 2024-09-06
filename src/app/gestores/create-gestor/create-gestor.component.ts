@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { SpinnerComponent } from '../../layouts/spinner/spinner.component';
 import { CommonModule } from '@angular/common';
-import { ServicesService } from '../../shared/services.service';
+import { ServicesService } from '../../../shared/services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Endereco } from '../../models/endereco';
+import { Endereco } from '../../../models/endereco';
 
 @Component({
   selector: 'app-create-gestor',

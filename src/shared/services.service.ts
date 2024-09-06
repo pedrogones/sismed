@@ -1,4 +1,4 @@
-import { Endereco } from './../models/endereco';
+import { Endereco } from '../models/endereco';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';

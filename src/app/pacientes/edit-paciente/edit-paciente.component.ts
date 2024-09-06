@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServicesService } from '../../shared/services.service';
+import { ServicesService } from '../../../shared/services.service';
 
 @Component({
   selector: 'app-edit-paciente',

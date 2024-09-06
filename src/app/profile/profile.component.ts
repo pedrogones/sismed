@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ServicesService } from '../shared/services.service';
+import { ServicesService } from '../../shared/services.service';
 declare var $ : any;
 @Component({
   selector: 'app-profile',
