@@ -10,6 +10,34 @@
         </div>
       </div>
     </div>
+  <!-- Modal login paciente -->
+  <div id="registerPaciente" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="registerPacienteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"> <!-- Ajuste a largura da modal aqui -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerPacienteLabel">Olá, seja bem vindo! <br> Cadastre-se aqui</h5>
+        </div>
+        <div class="modal-body">
+          <app-register></app-register>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal login medico -->
+  <div id="createConsultaModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createConsultaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document"> <!-- Ajuste a largura da modal aqui -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createConsultaModalLabel">Marcar Nova Consulta</h5>
+        </div>
+        <div class="modal-body">
+          <app-register></app-register>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <div class="w-100 d-flex justify-content-center align-items-center bg-white">
       <div class="w-75 px-4">
@@ -31,7 +59,7 @@
           <a href="/dashboard" type="submit" class="btn btn-primary mt-4 w-100">Entrar</a>
         </form>
         <div class="mt-3 d-flex justify-content-between">
-          <a href="/dashboard" class="btn btn-link">Não tem conta? Cadastre-se</a>
+          <button (click)="openRegisterPacienteModal()" class="btn btn-link">Não tem conta? Cadastre-se</button>
         </div>
       </div>
     </div>

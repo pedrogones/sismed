@@ -12,6 +12,7 @@ import { RegisterPacienteComponent } from './pacientes/register-paciente/registe
 import { CreatePacienteComponent } from './pacientes/create-paciente/create-paciente.component';
 import { GestoresComponent } from './gestores/gestores.component';
 import { CreateGestorComponent } from './gestores/create-gestor/create-gestor.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -26,7 +27,8 @@ export const routes: Routes = [
       { path: 'pacientes/create', component: CreatePacienteComponent },
       { path: 'medicos', component: MedicosComponent },
       { path: 'gestores', component: GestoresComponent },
-      { path: 'gestores/create', component: CreateGestorComponent }
+      { path: 'gestores/create', component: CreateGestorComponent },
+      { path: 'meu-perfil', component: ProfileComponent }
 
     ]
   },

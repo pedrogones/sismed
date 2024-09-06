@@ -1,0 +1,103 @@
+<section class="register-form">
+  <div class="container model pt-3">
+      <div class="card form-container card-widget widget-user">
+
+          <div class="widget-user-header" style="color: #075EA2;">
+              <h3 class="widget-user-username">{{ userName }}</h3>
+              <h5 class="widget-user-desc">{{ userDescription }}</h5>
+          </div>
+
+          <div class="card-footer row bg-white pt-4">
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+
+                 <div class="row form-row">
+                  <div class="py-2 col-md-7 floating-label field-cliente-nome validating">
+                    <label style="margin-left: 5px;" for="cliente-nome">Nome <strong class="text-danger">*</strong></label>
+                      <input type="text" class="form-control is-valid" formControlName="name" required placeholder="Nome">
+                  </div>
+                  <div class="floating-label col-md-5 py-2">
+                    <label style="margin-left: 5px;" for="DataNasc">Data de Nascimento <strong class="text-danger">*</strong></label>
+                      <input type="text" class="form-control" formControlName="birthdate" placeholder="Data de Nascimento" required>
+                  </div>
+                 </div>
+                 <div class="row form-row">
+
+                  <div class="floating-label col-md-2 py-2 select-floating field-cliente-sexo">
+                    <label style="margin-left: 5px;" style="top: 4px; margin: 0; opacity: 0.7; margin-left: 5px;" for="cliente-sexo">Sexo <strong class="text-danger">*</strong></label>
+                      <select id="cliente-sexo" class="form-control form-select" formControlName="gender" required>
+                          <option value="">Selecione...</option>
+                          <option value="male">Masculino</option>
+                          <option value="female">Feminino</option>
+                      </select>
+                  </div>
+
+                  <div class="floating-label col-md-6 py-2 field-cliente-email required">
+                    <label style="margin-left: 5px;" for="cliente-email">Email <strong class="text-danger">*</strong></label>
+                      <input type="email" class="form-control" formControlName="email" placeholder="Email" required>
+                  </div>
+                  <div class="floating-label col-md-4 py-2 field-cliente-telefone">
+                    <label style="margin-left: 5px;" for="cliente-telefone">Telefone <strong class="text-danger">*</strong></label>
+                      <input type="text" id="phone" class="form-control" formControlName="phone" placeholder="Telefone" required>
+                  </div>
+
+                </div>
+                  <div class="form-group field-cliente-foto">
+                      <input type="file" id="cliente-foto" class="d-none form-control-file" formControlName="profile_photo_path" accept="image/*">
+                  </div>
+
+                  <div class="form-group row">
+                      <div class="col-lg-6 d-lg-block mt-lg-2 mb-3">
+
+                      </div>
+                  </div>
+                  <div class="col-md-12 d-flex justify-content-start">
+                    <div class="mt-3">
+                      <button type="submit" class="btn btn-base btn-success" id="formSubmit">Salvar</button>
+                      <a class="btn btn-base btn-outline-secondary" style="margin-left: 8px;" href="/pacientes">Cancelar</a>
+                      <button type="button" class="btn btn-base btn-secondary d-lg-inline d-block" style="margin-left: 8px;" (click)="openModal()">
+                        <i class="fas fa-lock mr-2 fa-fw"></i>
+                        Alterar Senha
+                    </button>
+                    </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <div id="modalAlterarSenha" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content" style="height: 384px">
+              <div class="modal-header text-center">
+                  <h5 class="modal-title">Alterar Senha</h5>
+              </div>
+              <div class="modal-body">
+                  <section class="mt-5 mt-md-0">
+                      <div class="login-box">
+                          <form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+                              <div class="floating-label py-2 field-alterarsenhamodel-senhaatual required">
+                                <label style="margin-left: 5px;" for="alterarsenhamodel-senhaatual">Senha Atual <strong class="text-danger">*</strong></label>
+                                  <input type="password" id="current-password" class="form-control" formControlName="currentPassword" placeholder="Senha Atual" required>
+                              </div>
+                              <div class="floating-label py-2 field-alterarsenhamodel-senha required">
+                                <label style="margin-left: 5px;" for="alterarsenhamodel-senha">Nova Senha <strong class="text-danger">*</strong></label>
+                                  <input type="password" id="password" class="form-control" formControlName="password" placeholder="Nova Senha" required>
+                              </div>
+                              <div class="floating-label py-2 field-alterarsenhamodel-confirmasenha required">
+                                <label style="margin-left: 5px;" for="alterarsenhamodel-confirmasenha">Confirme a Nova Senha <strong class="text-danger">*</strong></label>
+                                  <input type="password" id="password-confirm" class="form-control" formControlName="confirmPassword" placeholder="Confirme a Nova Senha" required>
+                              </div>
+                              <div class="col-md-12 d-flex justify-content-start">
+                                <div class="mt-3">
+                                  <button type="submit" class="btn btn-base btn-success" id="formSubmit">Salvar</button>
+                                  <a class="btn btn-base btn-outline-secondary" style="margin-left: 8px;" (click)="closeModal()">Cancelar</a>
+                                </div>
+                              </div>
+                          </form>
+                      </div>
+                  </section>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
