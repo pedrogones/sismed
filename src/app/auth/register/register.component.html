@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()" id="consultaForm">
+  <div class="form-row row">
+    <div class="form-group mb-3 col-md-6">
+      <label for="paciente">Paciente <strong class="text-danger">*</strong></label>
+      <input type="text" id="nomePaciente" class="form-control" name="dataConsulta" required>
+    </div>
+  </div>
+
+  <div class="form-row row">
+    <div class="form-group mb-3 col-md-6">
+      <label for="dataConsulta">Data de Nascimento <strong class="text-danger">*</strong></label>
+      <input type="date" id="dataConsulta" class="form-control" name="dataConsulta" required>
+    </div>
+
+    <div class="form-group mb-3 col-md-6">
+      <label for="valorConsulta">Valor da Consulta <strong class="text-danger">*</strong></label>
+      <select id="valorConsulta" class="form-select form-control" name="valorConsulta" required>
+        <option value="300">Sem Plano</option>
+        <option value="200">Com Plano</option>
+        <option value="250">Prioridade em Médicos</option>
+      </select>
+    </div>
+  </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeModal('registerPaciente')">Fechar</button>
+      <button type="submit" class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+    </div>
+</form>

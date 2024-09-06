@@ -3,14 +3,14 @@
     <div class="form-group mb-3 col-md-6">
       <label for="paciente">Paciente <strong class="text-danger">*</strong></label>
       <select id="paciente" class="form-select form-control" [(ngModel)]="consulta.paciente" name="paciente" required>
-        <option *ngFor="let paciente of pacientes" [value]="paciente">{{ paciente.nome }}</option>
+        <option *ngFor="let paciente of pacientes" [value]="paciente.nome">{{ paciente.nome }}</option>
       </select>
     </div>
 
     <div class="form-group mb-3 col-md-6">
       <label for="medico">Médico <strong class="text-danger">*</strong></label>
       <select id="medico" class="form-select form-control" [(ngModel)]="consulta.medico" name="medico" required>
-        <option *ngFor="let medico of medicos" [value]="medico">{{ medico.nome }}</option>
+        <option *ngFor="let medico of medicos" [value]="medico.nome">{{ medico.nome }}</option>
       </select>
     </div>
   </div>

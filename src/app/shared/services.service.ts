@@ -54,4 +54,11 @@ export class ServicesService {
       })
     );
   }
+  iconProfile(name: string): string {
+    const trimmedName = name.trim();
+    const initials = trimmedName.split(' ').map(segment => segment.charAt(0)).join('');
+    const apiUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random&color=ffffff&size=200&rounded=true&bold=true&format=svg&length=1&uppercase=true`;
+    return apiUrl;
+  }
+
 }
